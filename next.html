@@ -9,7 +9,7 @@
  <style>
    body {
        background:black;
-       color:white;
+       color:blue;
        font-family:monospace;
    }  
      
@@ -18,7 +18,147 @@
   <a href="index.html"><div style="width:20%;font-size:28px;height:10%;color:white; position:fixed;top:1%;left:2%;">⬅️</div></a>    
  
   
-<center><h2>Monetization</h2></center>
+<center><h2 style="color:white;">Monetization</h2></center>
+  
+  
+  
+  <div class="faq-question">
+    <span style="color:white;">Dear Tycomm user, please submit your.... <h6 style="color:#00c0ff;">tap to see more</h6></span>
+    <i style ="background:white;"classs="arrow down"></i>
+    <div class="faq-answer">
+      <p>Data-sub phone number, Guest name, Network, WhatsApp number, account name, account number and bank name to This Email adress: <h4 style="color:red;">tycooninfinity@gmail.com</h4><br><br> The above Email will credit you, any other email apart from this ,is not ours, please be safe!</p>
+    </div>
+  </div>
+
+  
+  <br><br><br><br>
+  
+  
+  
+<div class="faq-container">
+  <div class="faq-question">
+    <span>Q: How Do i Get sarted with Tycomm APP?</span>
+    <i class="arrow down"></i>
+    <div class="faq-answer">
+      <p>A: Download our Tycomm application, launch the app, create a temporary account by tapping Guest, enter the name you like to use and it must be permanent name, and click login, you are in.</p>
+    </div>
+  </div>
+
+
+<br><br>
+
+
+  <div class="faq-question">
+    <span>Q: How do i get verified for monetization?</span>
+    <i class="arrow down"></i>
+    <div class="faq-answer">
+      <p>A: First, as a Tycomm user,click the three dot at the top left corner of the app, copy the Email and text your credentials to the Email given to you, you will receive a mail on your Email that you are verified for monetization.</p>
+    </div>
+  </div>
+
+<br><br>
+
+
+
+  <div class="faq-question">
+    <span>Q: How do i get paid?</span>
+    <i class="arrow down"></i>
+    <div class="faq-answer">
+      <p>A: After verifying your monetization, make sure you use the name permanently,else you might not get your weekend earnings or gift,Attend Tycomm chat everyday to get notified by Tycomm,mark the attendance whenever the poll is created,choose wisely, if you do this everyday, then you get paid every week, the polls can be created 5 - 10 times per day, depending on the season.</p>
+    </div>
+  </div>
+
+  
+  <br><br>
+  
+  
+  
+  <div class="faq-question">
+    <span>▪️ About</span>
+    <i class="arrow down"></i>
+    <div class="faq-answer">
+      <p>A: Tycomm is a Tycoon communication app where users from different region meet and compete for fun to get a particular gift and each users get paid weekly for using the application,it is free, it is mostly for students for there academic support, users can get paid weekly by Data-sub or money, depending on there attention.</p>
+    </div>
+  </div>
+</div>
+
+
+<style>
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.faq-question span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #333 transparent transparent transparent;
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(0deg);
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.faq-answer p {
+  font-size: 16px;
+}
+</style>
+
+
+
+<script>
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach((question) => {
+  question.addEventListener('click', () => {
+    const answer = question.querySelector('.faq-answer');
+    const arrow = question.querySelector('.arrow');
+
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+      arrow.className = 'arrow down';
+    } else {
+      answer.style.display = 'block';
+      arrow.className = 'arrow up';
+    }
+  });
+});
+</script>
+  
+  
+  
+  
+  
   
   
     
