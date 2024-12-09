@@ -58,7 +58,7 @@
 
 <div class="popup home">
   
-  <iframe src="vipgroup.html"></iframe>  
+  <iframe src="bbc.html"></iframe>  
    
   
   
@@ -85,25 +85,24 @@
  
 <h4>Sorry you are not yet eligible for monetization</h4>
 
+</br>
+
+<input id="text" value="tycooninfinity@gmail.com">
+
+
+<p style="font-size:11px;background:blue;width:30%;height:5%;border-radius:5px;" onclick="copyText()">📎 Copy email</p>
+
   
   <div class="progress-bar"></div>
  
  
  <p class="status-text">  
-</br>
-
-
-<h4 style="font-family:monospace; text-align:center;">Dearest honourable! You are now eligible for monetization, kindly send This credentials stated below to this Email address: tycooninfinity@gmail.com                                                 
-  
-  Guest name, Data-sub number, Network, Whatsapp number, account number, account name, bank name.              please make sure you entered the correct credentials and text it to the email address below </h4>
-  </br>
-
-
-<input id="text" value="tycooninfinity@gmail.com">
-<p style="font-size:11px;background:blue;width:30%;height:5%;border-radius:5px;" onclick="copyText()">📎 Copy email</p>
-
 
 </p>
+ 
+ 
+ 
+ 
   <button class="cancel">Cancel</button>
 </div>
 
@@ -199,7 +198,10 @@ localStorage.setItem('visitCount', visitCount);
 
 if (visitCount >= 10) {
   progressBar.style.width = '100%';
-  statusText.textContent = 'You can now monetize your account ✔️';
+  statusText.innerHTML = '<p>You can now monetize your account ✔️</p>  <h4>Dearest honourable! You are now eligible for monetization, kindly send This credentials stated below to this Emailaddress:tycooninfinity@gmail.com                                               Guest name, Data-sub number, Network, Whatsapp number, account number, account name, bank name. please make sure you entered the correct credentials and text it to the email address above! </h4> ';
+ 
+ 
+ 
   popupMessage.style.display = 'block';
   setTimeout(() => {
     popupMessage.style.display = 'none';
