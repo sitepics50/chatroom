@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-dots-wrapper">
+        <div class="nav-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
+            <div class="popup-buttons">
+                <button class="close-button" id="close-button">Close</button>
+                <button class="cancel-button" id="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="nav-links" id="nav-links">
+        <ul>
+            <li><a href="#" id="vip-group">VIP Group</a></li>
+            <li><a href="#" id="status">Status</a></li>
+            <li><a href="#" id="monetization">Monetization</a></li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="settings">Settings</a></li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.cancel-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+const navDots = document.querySelector('.nav-dots-wrapper');
+const popupOverlay = document.querySelector('.popup-overlay');
+const closeButton = document.querySelector('.close-button');
+const cancelButton = document.querySelector('.cancel-button');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links a');
+
+navDots.addEventListener('click', () => {
+    navLinks.style.display = 'block';
+});
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        navLinks.style.display = 'none';
+        popupOverlay.style.display = 'block';
+        const iframe = document.querySelector('iframe');
+        iframe.src = '(link unavailable)';
+    });
+});
+
+closeButton.addEventListener('click', () => {
+    popupOverlay.style.display = 'none';
+});
+
+cancelButton.addEventListener('click', () => {
+    popupOverlay.style.display = 'none';
+});
+</script>
